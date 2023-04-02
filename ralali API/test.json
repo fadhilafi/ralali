@@ -1,0 +1,1262 @@
+{
+	"info": {
+		"_postman_id": "a59ebd4b-18e7-4cbe-a663-ebf853b0d837",
+		"name": "Public API User",
+		"description": "Public API User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24497755"
+	},
+	"item": [
+		{
+			"name": "Get All User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 700ms\", function () {",
+							"pm.expect(pm.response.responseTime).to.be.below(700);",
+							"});",
+							"",
+							"// pm.test(\"Negative Case\", function () {",
+							"//     var jsonArrayData = pm.response.json();",
+							"//     pm.response.to.have.status(401);",
+							"//     pm.expect(jsonArrayData.error.errors[0]).to.eql(\"Unauthorized\");",
+							"// });",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "9fbf871c282cbedef5320ba6f2752f708048a14705713b91a4011e3f765f6196",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer ACCESS-TOKEN",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{url}}/public/v2/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer ACCESS-TOKEN",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}/public/v2/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"public",
+								"v2",
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 02 Apr 2023 08:16:09 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"9712a51729aa96c81df269f78b638a70\""
+						},
+						{
+							"key": "referrer-policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "x-download-options",
+							"value": "noopen"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "x-links-current",
+							"value": "https://gorest.co.in/public/v2/users?page=1"
+						},
+						{
+							"key": "x-links-next",
+							"value": "https://gorest.co.in/public/v2/users?page=2"
+						},
+						{
+							"key": "x-links-previous",
+							"value": ""
+						},
+						{
+							"key": "x-pagination-limit",
+							"value": "10"
+						},
+						{
+							"key": "x-pagination-page",
+							"value": "1"
+						},
+						{
+							"key": "x-pagination-pages",
+							"value": "250"
+						},
+						{
+							"key": "x-pagination-total",
+							"value": "2500"
+						},
+						{
+							"key": "x-permitted-cross-domain-policies",
+							"value": "none"
+						},
+						{
+							"key": "x-request-id",
+							"value": "9bf40039-9380-4f4d-80ef-6f1bc51ee4c8"
+						},
+						{
+							"key": "x-runtime",
+							"value": "0.044598"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "0"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=%2Fp9aHAqVh7Jh45SwyXlMEoCGi%2BtIf%2FtNC10jDis%2FZ0g2K34w0ORFWyC9K1y%2Ff%2Fz8Cfo7UVKgmNhJbUxXtoWZ79HahiQR4Lf4mQWEtzb8XGFC%2FBtOPJQ04jQKNBhrli8%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7b17a0cab9ee3df4-SIN"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 654249,\n        \"name\": \"Sarvin Khatri JD\",\n        \"email\": \"khatri_jd_sarvin@emard-vandervort.co\",\n        \"gender\": \"male\",\n        \"status\": \"active\"\n    },\n    {\n        \"id\": 653200,\n        \"name\": \"Vishwamitra Gill\",\n        \"email\": \"gill_vishwamitra@mertz.biz\",\n        \"gender\": \"female\",\n        \"status\": \"inactive\"\n    },\n    {\n        \"id\": 653199,\n        \"name\": \"Baalagopaal Reddy\",\n        \"email\": \"reddy_baalagopaal@metz-feeney.net\",\n        \"gender\": \"male\",\n        \"status\": \"active\"\n    },\n    {\n        \"id\": 652622,\n        \"name\": \"Bhilangana Gill\",\n        \"email\": \"gill_bhilangana@gusikowski-stehr.name\",\n        \"gender\": \"male\",\n        \"status\": \"inactive\"\n    },\n    {\n        \"id\": 651798,\n        \"name\": \"Adripathi Khatri\",\n        \"email\": \"khatri_adripathi@dickinson.org\",\n        \"gender\": \"female\",\n        \"status\": \"inactive\"\n    },\n    {\n        \"id\": 651797,\n        \"name\": \"Anusuya Mehrotra IV\",\n        \"email\": \"mehrotra_iv_anusuya@goodwin-muller.info\",\n        \"gender\": \"female\",\n        \"status\": \"inactive\"\n    },\n    {\n        \"id\": 651796,\n        \"name\": \"Amb. Anil Mehra\",\n        \"email\": \"anil_mehra_amb@homenick.org\",\n        \"gender\": \"male\",\n        \"status\": \"inactive\"\n    },\n    {\n        \"id\": 650577,\n        \"name\": \"Ekaksh Menon\",\n        \"email\": \"menon_ekaksh@blanda.info\",\n        \"gender\": \"female\",\n        \"status\": \"inactive\"\n    },\n    {\n        \"id\": 650576,\n        \"name\": \"Aashritha Nehru\",\n        \"email\": \"nehru_aashritha@monahan.info\",\n        \"gender\": \"male\",\n        \"status\": \"active\"\n    },\n    {\n        \"id\": 650575,\n        \"name\": \"Kanishka Shah III\",\n        \"email\": \"iii_kanishka_shah@hickle-roob.io\",\n        \"gender\": \"male\",\n        \"status\": \"inactive\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Create User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 700ms\", function () {",
+							"pm.expect(pm.response.responseTime).to.be.below(700);",
+							"});",
+							"",
+							"// pm.test(\"Negative Case\", function () {",
+							"//     var jsonArrayData = pm.response.json();",
+							"//     pm.response.to.have.status(422);",
+							"//     pm.expect(jsonArrayData.error.errors[0]).to.eql(\"Unprocessable Entity\");",
+							"// });",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "9fbf871c282cbedef5320ba6f2752f708048a14705713b91a4011e3f765f6196",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 9fbf871c282cbedef5320ba6f2752f708048a14705713b91a4011e3f765f6196",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Tenali Ramakrishna\",\n    \"gender\": \"male\",\n    \"email\": \"tes3@mailinator.com\",\n    \"status\": \"active\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/public/v2/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "422",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 9fbf871c282cbedef5320ba6f2752f708048a14705713b91a4011e3f765f6196",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Tenali Ramakrishna\",\n    \"gender\": \"male\",\n    \"email\": \"tenali.ramakrishnaa1@16ce.com\",\n    \"status\": \"active\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/public/v2/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"public",
+								"v2",
+								"users"
+							]
+						}
+					},
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 02 Apr 2023 08:17:32 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "referrer-policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "x-download-options",
+							"value": "noopen"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "x-permitted-cross-domain-policies",
+							"value": "none"
+						},
+						{
+							"key": "x-ratelimit-limit",
+							"value": "90"
+						},
+						{
+							"key": "x-ratelimit-remaining",
+							"value": "89"
+						},
+						{
+							"key": "x-ratelimit-reset",
+							"value": "1"
+						},
+						{
+							"key": "x-request-id",
+							"value": "c5cd8f01-d07e-4e7d-ab7f-02273761ebc1"
+						},
+						{
+							"key": "x-runtime",
+							"value": "0.117416"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "0"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=xVjETO8H3nkmbcJGtRNQa084AdbYQ%2Bya0BC6cSMhCS8Zmn1Xm2DCKQ1vUqVsQtlj4ZbQdbcHehG%2FyOJw%2F2ywGvd0abl1aNOrrGQzk%2BDv0im50tuXJ62qT9eDvyaAmJ8%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7b17a2d2cb423df4-SIN"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"field\": \"email\",\n        \"message\": \"has already been taken\"\n    }\n]"
+				},
+				{
+					"name": "201 Created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 9fbf871c282cbedef5320ba6f2752f708048a14705713b91a4011e3f765f6196",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Tenali Ramakrishna\",\n    \"gender\": \"male\",\n    \"email\": \"tes1@mailinator.com\",\n    \"status\": \"active\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/public/v2/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"public",
+								"v2",
+								"users"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 02 Apr 2023 08:21:17 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"acd470da3ec54fb670a868402c1efa93\""
+						},
+						{
+							"key": "location",
+							"value": "https://gorest.co.in/public/v2/users/654695"
+						},
+						{
+							"key": "referrer-policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "x-download-options",
+							"value": "noopen"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "x-permitted-cross-domain-policies",
+							"value": "none"
+						},
+						{
+							"key": "x-ratelimit-limit",
+							"value": "90"
+						},
+						{
+							"key": "x-ratelimit-remaining",
+							"value": "89"
+						},
+						{
+							"key": "x-ratelimit-reset",
+							"value": "1"
+						},
+						{
+							"key": "x-request-id",
+							"value": "93cd94c6-0835-4314-8437-1b65a8d7b02a"
+						},
+						{
+							"key": "x-runtime",
+							"value": "0.100118"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "0"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=HWonNe5icLAQBuAik%2Fx7%2BTVpNCSkPRBVPq6Gy9ctfcn0XgEK2yFzSuAfkqYlKqLNPjnQZn4bkdhAASBu4aTICVGlGe1%2BJgA%2FY4RADFLWJiXoE9VMpm0BpnAejEAU3YU%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7b17a850ac2d3df4-SIN"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 654695,\n    \"name\": \"Tenali Ramakrishna\",\n    \"email\": \"tes1@mailinator.com\",\n    \"gender\": \"male\",\n    \"status\": \"active\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Update User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 700ms\", function () {",
+							"pm.expect(pm.response.responseTime).to.be.below(700);",
+							"});",
+							"",
+							"// pm.test(\"Negative Case\", function () {",
+							"//     var jsonArrayData = pm.response.json();",
+							"//     pm.response.to.have.status(422);",
+							"//     pm.expect(jsonArrayData.error.errors[0]).to.eql(\"Unprocessable Entity\");",
+							"// });",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 9fbf871c282cbedef5320ba6f2752f708048a14705713b91a4011e3f765f6196",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Allasani Peddana\",\n    \"email\": \"tenali.rer@16ce.com\",\n    \"status\": \"inactive\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/public/v2/users/660636",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users",
+						"660636"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 Created",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 9fbf871c282cbedef5320ba6f2752f708048a14705713b91a4011e3f765f6196",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Allasani Peddana\",\n    \"email\": \"tenali.ramakrishnaa@16ce.com\",\n    \"status\": \"inactive\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/public/v2/users/654249",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"public",
+								"v2",
+								"users",
+								"654249"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 02 Apr 2023 08:19:05 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"4e855612a7ad0e3acd97f0041c6c904f\""
+						},
+						{
+							"key": "referrer-policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "x-download-options",
+							"value": "noopen"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "x-permitted-cross-domain-policies",
+							"value": "none"
+						},
+						{
+							"key": "x-ratelimit-limit",
+							"value": "90"
+						},
+						{
+							"key": "x-ratelimit-remaining",
+							"value": "89"
+						},
+						{
+							"key": "x-ratelimit-reset",
+							"value": "1"
+						},
+						{
+							"key": "x-request-id",
+							"value": "23fb56e7-5ef0-4287-b04c-c855f4504535"
+						},
+						{
+							"key": "x-runtime",
+							"value": "0.079077"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "0"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=Hd4qkyPLH4FC%2FXXpWAwLdjgN%2B0rqrk1ZziX0%2BycCVF3pNzoCeVvgUQ3b%2BFP29gKq70tJ5uKeUe3G7L4Ms%2BUAVWbrv7y3qxJxjebqjDzc4hCHdairkkkahEIbZ80R26M%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7b17a51578f13df4-SIN"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"email\": \"tenali.ramakrishnaa@16ce.com\",\n    \"name\": \"Allasani Peddana\",\n    \"status\": \"inactive\",\n    \"id\": 654249,\n    \"gender\": \"male\"\n}"
+				},
+				{
+					"name": "404 not found",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 9fbf871c282cbedef5320ba6f2752f708048a14705713b91a4011e3f765f6196",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Allasani Peddana\",\n    \"email\": \"tenali.ramakrishnaa@16ce.com\",\n    \"status\": \"inactive\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/public/v2/users/654249",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"public",
+								"v2",
+								"users",
+								"654249"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 02 Apr 2023 08:19:44 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "referrer-policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "x-download-options",
+							"value": "noopen"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "x-permitted-cross-domain-policies",
+							"value": "none"
+						},
+						{
+							"key": "x-request-id",
+							"value": "5e9d0240-8d8d-43d4-98a8-c85ff6287eac"
+						},
+						{
+							"key": "x-runtime",
+							"value": "0.023620"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "0"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=aRqD8WlNzqxvVj9RTAS%2BnYoRZbTwi9QSakqLPXMSoigcsTEUfVR7470uHqH3FizuaYuv0sRpsDuY6zPBUIA24uC0Bx%2BuDM3c67WvF3uIx6ECr%2BB0m9iQ%2BXdesJcsnhA%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7b17a60b7da13df4-SIN"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Resource not found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 700ms\", function () {",
+							"pm.expect(pm.response.responseTime).to.be.below(700);",
+							"});",
+							"",
+							"// pm.test(\"Negative Case\", function () {",
+							"//     var jsonArrayData = pm.response.json();",
+							"//     pm.response.to.have.status(422);",
+							"//     pm.expect(jsonArrayData.error.errors[0]).to.eql(\"Unprocessable Entity\");",
+							"// });",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "9fbf871c282cbedef5320ba6f2752f708048a14705713b91a4011e3f765f6196",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 9fbf871c282cbedef5320ba6f2752f708048a14705713b91a4011e3f765f6196",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "{{url}}/public/v2/users/660636",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users",
+						"660636"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "404 not found",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 9fbf871c282cbedef5320ba6f2752f708048a14705713b91a4011e3f765f6196",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}/public/v2/users/856438",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"public",
+								"v2",
+								"users",
+								"856438"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 02 Apr 2023 08:21:38 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "referrer-policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "x-download-options",
+							"value": "noopen"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "x-permitted-cross-domain-policies",
+							"value": "none"
+						},
+						{
+							"key": "x-ratelimit-limit",
+							"value": "90"
+						},
+						{
+							"key": "x-ratelimit-remaining",
+							"value": "89"
+						},
+						{
+							"key": "x-ratelimit-reset",
+							"value": "1"
+						},
+						{
+							"key": "x-request-id",
+							"value": "3a9ee9fd-4679-46d7-bb9b-876a1a909f72"
+						},
+						{
+							"key": "x-runtime",
+							"value": "0.062130"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "0"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=%2F5%2BNPb4wf6rrCptrxX7jRPiobYEyygXyI6q39noAqK6MHrWjQTX9D%2BEFb3yxbAwAdWkloExxoYlsIoQBO7S1aYxjkpU%2F1g1TbrVkktLACR%2F4epwkY2r5%2FG4jhSfFKy8%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7b17a8d249723df4-SIN"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Resource not found\"\n}"
+				},
+				{
+					"name": "204",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 9fbf871c282cbedef5320ba6f2752f708048a14705713b91a4011e3f765f6196",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}/public/v2/users/654249",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"public",
+								"v2",
+								"users",
+								"654249"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 02 Apr 2023 08:21:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "referrer-policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "x-download-options",
+							"value": "noopen"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "x-permitted-cross-domain-policies",
+							"value": "none"
+						},
+						{
+							"key": "x-ratelimit-limit",
+							"value": "90"
+						},
+						{
+							"key": "x-ratelimit-remaining",
+							"value": "89"
+						},
+						{
+							"key": "x-ratelimit-reset",
+							"value": "1"
+						},
+						{
+							"key": "x-request-id",
+							"value": "995a8bf2-2e84-49ea-84f6-9cde8c1d1a0f"
+						},
+						{
+							"key": "x-runtime",
+							"value": "0.102222"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "0"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=Eg9fNM2DoDGAS3bCyn1fl8zf9UY668HvBAuw1wnIAGUYZu22CfRCMCpvcKFEPKqVGuF0SktOK4wYcC6N0p9o82tIQm4PKR6njDsxk8jpLjZ7DmYkK6yNNf8QkYRv0OU%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7b17a92c4cf83df4-SIN"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
