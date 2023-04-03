@@ -1,0 +1,15 @@
+{
+	"id": "0f095ac5-82c2-4cfa-a5d7-6e2cfc44034f",
+	"name": "quiz4",
+	"values": [
+		{
+			"key": "base_url",
+			"value": "https://axel.dcidev.id",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2023-03-25T03:54:29.390Z",
+	"_postman_exported_using": "Postman/10.11.2"
+}

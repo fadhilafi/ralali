@@ -1,0 +1,1364 @@
+{
+	"info": {
+		"_postman_id": "a1ba30cd-97dd-475b-9c80-68ea60df687c",
+		"name": "Quiz 4 Aksel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24497755"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"const response = pm.response.json();",
+							"pm.environment.set(\"base_url\", \"https://axel.dcidev.id\");",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "enaksekali",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "tahubulat",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "peri_cantik4",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "#peri_cantik4",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "peri_cantik9@mailinator.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Luna Maya",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/registration",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"registration"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "201 Registration",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "peri_cantik1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "#Happyday101",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "peri_cantik1@mailinator.com",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Luna Maya",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/registration",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"registration"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 Mar 2023 05:03:56 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "180"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"beca3c2c4e6d48fbf8121456b813a547\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "4d69330e-076f-4771-85c5-23c4e4ac321e"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.060156"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Success retrieve data\",\n    \"data\": {\n        \"user\": {\n            \"username\": \"peri_cantik1\",\n            \"name\": \"Luna Maya\",\n            \"email\": \"peri_cantik1@mailinator.com\",\n            \"phone\": null,\n            \"gender\": null,\n            \"address\": null\n        }\n    }\n}"
+				},
+				{
+					"name": "500 Email has already been taken",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "peri_cantik1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "pericantik11",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "peri_cantik1@mailinator.com",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "yayaya",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/registration",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"registration"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 Mar 2023 04:52:30 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "116"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "e543d0a5-a42b-44a4-9303-466f1d2a7f09"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.010290"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": 500,\n        \"errors\": [\n            \"Validation failed: Username has already been taken, Email has already been taken\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "401 Unauthetication",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/registration",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"registration"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 Mar 2023 04:57:33 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "51"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "abed54ba-1fc7-436d-bb58-c8bfcc9225a3"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.006985"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": 401,\n        \"errors\": [\n            \"Unauthenticated\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "422 Missing all params",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "princess_ar13l",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "@reDneverfails34",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "princessariel@yopmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "Ariel Tatum",
+									"type": "text",
+									"disabled": true
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/registration",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"registration"
+							]
+						}
+					},
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 Mar 2023 06:02:52 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "214"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "82408c20-7850-4417-bf92-bf4cb897b0dd"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.006114"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": 422,\n        \"errors\": [\n            {\n                \"param\": \"username\",\n                \"messages\": [\n                    \"is missing\"\n                ]\n            },\n            {\n                \"param\": \"password\",\n                \"messages\": [\n                    \"is missing\"\n                ]\n            },\n            {\n                \"param\": \"name\",\n                \"messages\": [\n                    \"is missing\"\n                ]\n            },\n            {\n                \"param\": \"email\",\n                \"messages\": [\n                    \"is missing\"\n                ]\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"const response = pm.response.json();",
+							"pm.environment.set(\"base_url\", \"https://axel.dcidev.id\");",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "enaksekali",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "tahubulat",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "peri_cantik3",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "#peri_cantik3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/auth",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"auth"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "201 Login Successful",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "peri_cantik1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "#Happyday101",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/auth",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 Mar 2023 05:07:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "155"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"5c5d9f4b4ebe256147a1c22c75dcf1f3\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "42f686bc-1229-4487-bc3d-0e013fb4c222"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.018588"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Success retrieve data\",\n    \"data\": {\n        \"access_token\": {\n            \"token\": \"ViD7Ad-wi5uVXVBhfckT1Rc3NSRMbqz_xS_36rNgN7g\",\n            \"type\": \"Bearer\",\n            \"expires_at\": 1679802671\n        }\n    }\n}"
+				},
+				{
+					"name": "401 Failed Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "pericantik11",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "#Happyday101",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/auth",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 Mar 2023 05:08:01 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "76"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "0dd17f80-261c-4006-b716-4ce5ab5dfb80"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.004949"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": null,\n        \"errors\": [\n            \"Invalid username / password combination\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "422 required",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "peri_cantik3",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "#peri_cantik3",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/auth",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth"
+							]
+						}
+					},
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Mar 2023 05:04:44 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "127"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "5cffa151-fffe-4e4d-bc88-80ff569359b6"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.002619"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": 422,\n        \"errors\": [\n            {\n                \"param\": \"username\",\n                \"messages\": [\n                    \"is missing\"\n                ]\n            },\n            {\n                \"param\": \"password\",\n                \"messages\": [\n                    \"is missing\"\n                ]\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Log Out",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"const response = pm.response.json();",
+							"pm.environment.set(\"base_url\", \"https://axel.dcidev.id\");",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v1/logout",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"logout"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"logout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Mar 2023 04:57:02 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "46"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"162b2282000e798e92374fee0dcbfc12\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "c822bcc6-9178-4b42-9d48-fb641aa45c17"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.009408"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Success logout user\",\n    \"data\": \"OK!\"\n}"
+				},
+				{
+					"name": "401 Unauthorized",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"logout"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 Mar 2023 09:34:53 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "f27c0749-9056-4fbb-a24a-f909f842c890"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.390693"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": 401,\n        \"errors\": [\n            \"Unauthorized\"\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Profile",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"const response = pm.response.json();",
+							"pm.environment.set(\"base_url\", \"https://axel.dcidev.id\");",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ViD7Ad-wi5uVXVBhfckT1Rc3NSRMbqz_xS_36rNgN7g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/v1/profile",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"profile"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/profile",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"profile"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 Mar 2023 10:09:13 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "186"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"cc12c86bc02f7142813ab65eecb424f7\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "69f0821e-3b0d-470a-85e7-3b2c72e066e9"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.148198"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Success retrieve data\",\n    \"data\": {\n        \"user\": {\n            \"username\": \"princess_ar13334\",\n            \"name\": \"Ariel Tatuma\",\n            \"email\": \"princessariel334@yopmail.com\",\n            \"phone\": null,\n            \"gender\": null,\n            \"address\": null\n        }\n    }\n}"
+				},
+				{
+					"name": "401 Unauthorized",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/v1/profile",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"profile"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 Mar 2023 10:09:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "8ce81c3a-6ca6-499f-b6f3-2ff50ea108ac"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.006859"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": 401,\n        \"errors\": [\n            \"Unauthorized\"\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Profile",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});",
+							"const response = pm.response.json();",
+							"pm.environment.set(\"base_url\", \"https://axel.dcidev.id\");",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "ViD7Ad-wi5uVXVBhfckT1Rc3NSRMbqz_xS_36rNgN7g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n            \"username\": \"peri_cantik1\",\n            \"password\": \"#Happyday101\",\n            \"email\": \"peri_cantik1@mailinator.com\",\n            \"name\": \"Luna Ariel\",\n            \"phone\": \"085607234457\",\n            \"gender\": \"female\",\n            \"address\": \"Jalan Terang Bulan 1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/api/v1/profile/update",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"profile",
+						"update"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "201 Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"username\": \"peri_cantik1\",\n            \"password\": \"#Happyday101\",\n            \"email\": \"peri_cantik1@mailinator.com\",\n            \"name\": \"Luna Ariel\",\n            \"phone\": \"085607234457\",\n            \"gender\": \"female\",\n            \"address\": \"Jalan Terang Bulan 1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/profile/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"profile",
+								"update"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Mar 2023 05:24:30 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "211"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"6811c58e7674a07224abc46502450181\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "b45c78f8-1b09-45bc-b5db-abfb6434fdaf"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.011237"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Success retrieve data\",\n    \"data\": {\n        \"user\": {\n            \"username\": \"peri_cantik1\",\n            \"name\": \"Luna Ariel\",\n            \"email\": \"peri_cantik1@mailinator.com\",\n            \"phone\": \"085607234457\",\n            \"gender\": \"female\",\n            \"address\": \"Jalan Terang Bulan 1\"\n        }\n    }\n}"
+				},
+				{
+					"name": "401 Unauthorized",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"username\": \"\",\n            \"password\": \"\",\n            \"email\": \"\",\n            \"name\": \"\",\n            \"phone\": \"\",\n            \"gender\": \"\",\n            \"address\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/profile/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"profile",
+								"update"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Mar 2023 04:08:53 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "08acd80b-9293-479a-b701-0cb31f2f7ed6"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.002119"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": 401,\n        \"errors\": [\n            \"Unauthorized\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "422",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"username\": \"\",\n            \"password\": \"\",\n            \"email\": \"\",\n            \"name\": \"\",\n            \"phone\": \"\",\n            \"gender\": \"\",\n            \"address\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/v1/profile/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"profile",
+								"update"
+							]
+						}
+					},
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 25 Mar 2023 04:08:21 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "139"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "e1efc04d-568b-47b8-a3a9-4ebdaa8093fd"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.036791"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"code\": 422,\n        \"errors\": [\n            {\n                \"param\": \"email\",\n                \"messages\": [\n                    \"is invalid\"\n                ]\n            },\n            {\n                \"param\": \"gender\",\n                \"messages\": [\n                    \"does not have a valid value\"\n                ]\n            }\n        ]\n    }\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "enaksekali",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "tahubulat",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
