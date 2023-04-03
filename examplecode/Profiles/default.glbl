@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>default</name>
+   <tag></tag>
+   <defaultProfile>true</defaultProfile>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'https://deployed-five.vercel.app/'</initValue>
+      <name>secondhand</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'C:\\Users\\ll\\Downloads\\app-release.apk'</initValue>
+      <name>app_path</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>

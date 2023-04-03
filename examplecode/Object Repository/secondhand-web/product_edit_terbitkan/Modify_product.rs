@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>Modify_product</name>
+   <tag></tag>
+   <elementGuidId>d2d1b0c4-971b-4ac9-bf62-dba1245472dd</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[contains(@id,'nm_produk')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[contains(@id,'nm_produk')]</value>
+      <webElementGuid>e5ae0029-c5fa-4be7-9b68-2d5e041d8d0c</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

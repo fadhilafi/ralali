@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "D120F49CE3B81530522FB468481FF55A",
+  "keywordClasses": [
+    {
+      "name": "add_product.mandatoryfieldblank",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

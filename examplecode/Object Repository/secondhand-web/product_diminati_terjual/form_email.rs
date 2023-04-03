@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>form_email</name>
+   <tag></tag>
+   <elementGuidId>3852897b-0643-4400-aff2-fbb0f234e080</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>//*[contains(@class,'exampleInputEmail1')]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>//*[contains(@id,'exampleInputEmail1')]</value>
+      <webElementGuid>707f3f4e-3dc1-46fe-a58c-d6617b0d178d</webElementGuid>
+   </webElementProperties>
+</WebElementEntity>

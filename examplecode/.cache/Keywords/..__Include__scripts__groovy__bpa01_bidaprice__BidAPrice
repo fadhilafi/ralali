@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "9DEF5F7228BBAC711310BD23CFA39714",
+  "keywordClasses": [
+    {
+      "name": "bpa01_bidaprice.BidAPrice",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "872CF23870D1E6BF8347D02FA9FA225E",
+  "keywordClasses": [
+    {
+      "name": "bid_a_price.BidAPrice",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

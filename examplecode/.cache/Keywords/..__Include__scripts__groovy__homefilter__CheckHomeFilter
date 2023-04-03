@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "44523CCE33D40D4842D9F797EF29C75A",
+  "keywordClasses": [
+    {
+      "name": "homefilter.CheckHomeFilter",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

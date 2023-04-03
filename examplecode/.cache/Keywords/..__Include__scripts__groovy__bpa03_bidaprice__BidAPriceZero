@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "D1276D5EF0EA5A9AC53B1301A61B6C40",
+  "keywordClasses": [
+    {
+      "name": "bpa03_bidaprice.BidAPriceZero",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}
